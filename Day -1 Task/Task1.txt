@@ -1,0 +1,38 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2
+      
+HTTP1.1:
+
+1)One Request per Connection: Each request-response cycle typically requires a new TCP connection, leading to head-of-line blocking.
+
+2)Limited Multiplexing: Multiplexing capabilities are restricted, causing latency issues, especially for websites with numerous resources.
+
+4)Header Overhead: Headers contain redundant information, increasing overhead as the entire header must be resent with each request.
+
+5)No Built-in Compression: Compression of request and response payloads is optional, resulting in potentially larger data transfers.
+
+6)No Server Push: Lacks the ability for servers to push resources proactively to clients, increasing latency in fetching required assets.
+
+7)No Stream Prioritization: Lack of stream prioritization can lead to inefficient resource loading, especially for complex web pages.
+
+8)No Binary Protocol: Communication occurs in plain text, making it susceptible to eavesdropping and potentially less secure compared to HTTP/2.
+
+9)Limited Performance Optimization: Performance optimizations like data compression and prioritization are less advanced or non-existent compared to HTTP/2.
+
+
+HTTP2:
+
+1)Binary Protocol: Uses a binary protocol, making communication more compact and less prone to errors compared to the text-based approach of HTTP/1.1.
+
+2)Header Compression and Multiplexing: Utilizes header compression and multiplexing to minimize latency and overhead, resulting in faster page load times.
+
+3)Enhanced Security: Incorporates features like multiplexed encryption, improving security compared to HTTP/1.1.
+
+4)Backward Compatibility: Designed to be backward compatible with HTTP/1.1, allowing gradual adoption and seamless transition for existing web infrastructure.
+
+5)Multiplexing and Concurrency: Supports multiplexing, enabling multiple requests and responses over a single connection simultaneously, reducing latency.
+
+6)Header Compression: Uses header compression techniques like HPACK, minimizing overhead by encoding headers in a more efficient binary format.
+
+7)Server Push: Allows servers to proactively send resources to clients before they are requested, improving page load times.
+
+8)Stream Prioritization: Clients can assign priority levels to individual streams, ensuring critical resources are fetched and rendered first, enhancing perceived performance.

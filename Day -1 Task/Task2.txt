@@ -1,0 +1,22 @@
+Write a blog about objects and its internal representation in Javascript
+ 
+  1)Object Structure: Objects in JavaScript are collections of key-value pairs where keys are strings (or symbols) and values can be any data type, including other objects.
+
+  2)Internal Representation:
+        >Properties and Methods: Stored internally as a collection of slots.
+        >Property Descriptors: Define attributes like writability, enumerability, and configurability.
+        >Prototypes and Prototype Chains: Objects have links to other objects known as prototypes; the prototype chain is traversed for property lookups.
+        >Hidden Classes (V8 Engine): Used for optimizing property access in some JavaScript engines like V8.
+        >Hash Tables: Often used to efficiently store object properties and methods.
+
+ 3)Performance Considerations:
+
+       >Property Access: Accessing properties closer to the beginning of the prototype chain is faster.
+       >Property Enumeration: Enumerating properties with for...in loops can be slower, especially for objects with many properties.
+       >Object Creation: Frequent object creation may have performance overhead due to memory allocation and initialization.
+
+ 4)Optimization: Understanding internal representations can lead to optimized code by considering factors like property access patterns and object creation frequency.
+
+ 5)JavaScript Engine Differences: While concepts are common, implementations may vary between JavaScript engines like V8, SpiderMonkey, and JavaScriptCore.
+
+ 6)Performance Awareness: Developers should be aware of performance implications when working with objects, especially in performance-critical code.
